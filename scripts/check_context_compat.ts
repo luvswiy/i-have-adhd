@@ -16,8 +16,7 @@ const ompMessages = [{ role: "custom", customType: ACTIVE }];
 const ompManager = {
   buildSessionContext: () => ({ messages: ompMessages }),
   buildContextEntries: () => {
-    throw new Error("Pi fallback must not run when OMP API is available");
-  },
+      throw new Error("temporary context failure");  },
 };
 assert(
   contextMessages(ompManager) === ompMessages,
